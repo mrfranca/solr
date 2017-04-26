@@ -1,0 +1,11 @@
+[Service]
+Type=forking
+PIDFile=/opt/solr-6.4.2/bin/solr-8983.pid
+ExecStartPre=/usr/bin/solr
+ExecStart=/usr/bin/solr
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+ 
+[Install]
+WantedBy=multi-user.target
