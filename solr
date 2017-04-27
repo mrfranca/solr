@@ -1,6 +1,4 @@
 #!/bin/bash
 
-/etc/init.d/ssh start
-
 su - solr -c "/opt/solr-6.4.2/bin/solr start"
 tailf /opt/solr-6.4.2/server/logs/solr.log
